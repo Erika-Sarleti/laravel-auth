@@ -14,11 +14,11 @@ class PostSeeder extends Seeder
     public function run(Faker $faker)
     {
         for($i=0; $i<10;$i++){
-            $title=$faker->words(rand(2,8), true);
+            $name=$faker->words(rand(2,8), true);
             Post::create([
-                'title'=> $title,
+                'name'=> $name,
                 'content'=>$faker->text(100,500),
-                'slug'=>Post::genSlug($title),
+                'slug'=>Post::genSlug($name),
             ]);
         }
     }

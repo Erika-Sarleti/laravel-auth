@@ -15,5 +15,6 @@ class Post extends Model
             $slug=$slugBase-$i;
             $i++;
         }
+        return $slug;
     }
 }
